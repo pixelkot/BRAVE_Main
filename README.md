@@ -8,7 +8,7 @@
        - User
     * attributes
        - static (basically this is just a rigid body)
-* Obstacle API
+## Obstacle API
   * should be an abstract class
   * each "rule" -- probably a class that implements obstacle needs to be hand made
 
@@ -27,6 +27,4 @@
       * grabbing
 
 ## Module interactions
-   obstacle <---> maze
-   |                |
-   |------> user <--|
+   obstacle, maze, user
