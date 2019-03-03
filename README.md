@@ -2,6 +2,8 @@
 # Link to Documentation
 https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU
 
+# Unity version is 2017.1.1
+
 *Updated as of 26th of Feb.*
 ## World API
   * environment (this is basically the scene)
