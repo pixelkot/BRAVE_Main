@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0d87d0b14217b1c4f9c9f0441d2d4e18
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - initiator: {fileID: 4355062739249740, guid: f102b7c95afb1164fa6c9c487d8f13bb,
+      type: 2}
+  - prompt: {fileID: 4390983670326300, guid: 40e9687f38f7ab5408e9a1b27691799f, type: 2}
+  - yellowOrb: {fileID: 4113675487848508, guid: 53df544de548f4d4aa79f7375c0ae28a,
+      type: 2}
+  - blackOrb: {fileID: 4731210558155136, guid: 952c27af565673b45be8e0bf2dad6816, type: 2}
+  - winMessage: {fileID: 4825934792873362, guid: ccdfa08551032f346b3764c2be68df66,
+      type: 2}
+  - loseMessage: {fileID: 4321044110165996, guid: 00ff749c599b4a24c96abf4857f5a007,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
