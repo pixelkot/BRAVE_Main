@@ -28,6 +28,7 @@ public class ScriptLiarObstacle : MonoBehaviour, Obstacle {
 	public Transform blackOrb;
 	public Transform winMessage;
 	public Transform loseMessage;
+    public Transform completed;
 
 	// Use this for initialization
 	void Start () {
@@ -104,7 +105,10 @@ public class ScriptLiarObstacle : MonoBehaviour, Obstacle {
 			win.localPosition = new Vector3(0, 2, 0);
 
 			Destroy(win.gameObject, 5f);
-			Destroy(this);
+
+            Transform end = Instantiate(completed, this.transform);
+            end.localPosition = new Vector3(0, 1, 0);
+            Destroy(this);
 		}
 
 		if (outcome == 2) {
