@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1833264385984746}
+  m_IsPrefabParent: 1
+--- !u!1 &1833264385984746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4600260086631342}
+  - component: {fileID: 114757800021359072}
+  m_Layer: 0
+  m_Name: LiarObstacle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4600260086631342
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833264385984746}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114757800021359072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1833264385984746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d87d0b14217b1c4f9c9f0441d2d4e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initiator: {fileID: 4355062739249740, guid: f102b7c95afb1164fa6c9c487d8f13bb, type: 2}
+  prompt: {fileID: 4841680595879472, guid: 40e9687f38f7ab5408e9a1b27691799f, type: 2}
+  yellowOrb: {fileID: 4113675487848508, guid: 53df544de548f4d4aa79f7375c0ae28a, type: 2}
+  blackOrb: {fileID: 4731210558155136, guid: 952c27af565673b45be8e0bf2dad6816, type: 2}
+  winMessage: {fileID: 4116520561849770, guid: ccdfa08551032f346b3764c2be68df66, type: 2}
+  loseMessage: {fileID: 4463856494089918, guid: 00ff749c599b4a24c96abf4857f5a007,
+    type: 2}
+  completed: {fileID: 4550456236975772, guid: bb205945766015045bb11459c658c608, type: 2}
