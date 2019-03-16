@@ -82,3 +82,5 @@ MonoBehaviour:
     wallMaterial: {fileID: 2100000, guid: 50350b0ce989c49f49bfad6571a7e17f, type: 2}
   - floorMaterial: {fileID: 2100000, guid: f5eda244df04b4931a4363b01c292179, type: 2}
     wallMaterial: {fileID: 2100000, guid: 04bc7c0e7525949e8a468d841c93768f, type: 2}
+  mazeObstacles:
+  - {fileID: 1833264385984746, guid: 28200830ab22d5c4f91cfe1f4e1ac3a9, type: 2}

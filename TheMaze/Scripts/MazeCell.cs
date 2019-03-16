@@ -66,4 +66,28 @@ public class MazeCell : MonoBehaviour {
     {
         gameObject.SetActive(false);
     }
+
+    public void Lock()
+    {
+        for (int i = 0; i < edges.Length; i++)
+        {
+            if (edges[i] is MazeDoor)
+            {
+                MazeDoor door = edges[i] as MazeDoor;
+                door.Lock();
+            }
+        }
+    }
+
+    public void Unlock()
+    {
+        for (int i = 0; i < edges.Length; i++)
+        {
+            if (edges[i] is MazeDoor)
+            {
+                MazeDoor door = edges[i] as MazeDoor;
+                door.Unlock();
+            }
+        }
+    }
 }

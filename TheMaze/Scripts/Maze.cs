@@ -15,10 +15,12 @@ public class Maze : MonoBehaviour {
     [Range(0f, 1f)]
     public float doorProbability;
     public MazeRoomSettings[] roomSettings;
+    public GameObject[] mazeObstacles;
 
     private MazeCell[,] cells;
 
     private List<MazeRoom> rooms = new List<MazeRoom>();
+    private int currentRoom;
 
     private MazeRoom CreateRoom(int indexToExclude)
     {
@@ -64,8 +66,20 @@ public class Maze : MonoBehaviour {
         }
         for (int i = 0; i < rooms.Count; i++)
         {
+            CreateObstacleInRoom(rooms[i]);
             //rooms[i].Hide();
         }
+    }
+
+    private void CreateObstacleInRoom(MazeRoom room)
+    {
+        GameObject obstacle = mazeObstacles[Random.Range(0, mazeObstacles.Length)];
+        MazeCell cell = room.RandomCell();
+        obstacle = Instantiate(obstacle, this.transform);
+        obstacle.transform.parent = cell.transform;
+        obstacle.transform.localPosition = Vector3.zero;
+        obstacle.transform.localScale = Vector3.one * 0.25f;
+        room.obstacle = obstacle.GetComponent(typeof(Obstacle)) as Obstacle;
     }
 
     private void DoFirstGenerationStep(List<MazeCell> activeCells)

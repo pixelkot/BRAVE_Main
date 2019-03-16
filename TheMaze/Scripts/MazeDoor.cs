@@ -11,8 +11,8 @@ public class MazeDoor : MazePassage
 
     private IEnumerator closeCoroutine;
     private IEnumerator openCoroutine;
-    private bool exitedRoom = false;
     private bool seePlayer = false;
+    private bool locked = true;
 
     private MazeDoor OtherSideOfDoor
     {
@@ -27,7 +27,7 @@ public class MazeDoor : MazePassage
         base.Initialize(primary, other, direction);
         if (OtherSideOfDoor != null)
         {
-            hinge.localScale = new Vector3(-1f, 1f, 1f);
+            //hinge.localScale = new Vector3(-1f, 1f, 1f);
             Vector3 p = hinge.localPosition;
             p.x = -p.x;
             hinge.localPosition = p;
@@ -104,21 +104,51 @@ public class MazeDoor : MazePassage
         StartCoroutine(closeCoroutine);
     }
 
+    public void ScreenLock()
+    {
+
+    }
+
+    public void Unlock()
+    {
+        locked = false;
+        OtherSideOfDoor.locked = false;
+    }
+
+    public void Lock()
+    {
+        locked = true;
+        OtherSideOfDoor.locked = true;
+    }
+
     public void OnPlayerEnter()
     {
-        OtherSideOfDoor.cell.room.Show();
         seePlayer = true;
-        OpenDoor();
-        OtherSideOfDoor.OpenDoor();
+        if (locked)
+        {
+            if (cell.room.obstacle.gameState() == 1)
+            {
+                Unlock();
+            }
+        }
+        if (!locked)
+        {
+            OtherSideOfDoor.cell.room.Show();
+            OpenDoor();
+            OtherSideOfDoor.OpenDoor();
+        }
     }
 
     public void OnPlayerExit()
     {
         seePlayer = false;
-        if (!OtherSideOfDoor.seePlayer)
+        if (!locked)
         {
-            CloseDoor(false);
-            OtherSideOfDoor.CloseDoor(true);
+            if (!OtherSideOfDoor.seePlayer)
+            {
+                CloseDoor(false);
+                OtherSideOfDoor.CloseDoor(true);
+            }
         }
     }
 }

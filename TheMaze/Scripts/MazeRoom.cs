@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MazeRoom : ScriptableObject
 {
-
+    public Obstacle obstacle;
     public int settingsIndex;
 
     public MazeRoomSettings settings;
@@ -39,5 +39,26 @@ public class MazeRoom : ScriptableObject
         {
             cells[i].Show();
         }
+    }
+
+    public void Lock()
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            cells[i].Lock();
+        }
+    }
+
+    public void Unlock()
+    {
+        for (int i = 0; i < cells.Count; i++)
+        {
+            cells[i].Unlock();
+        }
+    }
+
+    public MazeCell RandomCell()
+    {
+        return cells[Random.Range(0, cells.Count)];
     }
 }

@@ -2,7 +2,7 @@
  	 Authors: Ahmet Oguzlu
  	 Updated: 03/01/2019 */
 
-interface Obstacle {
+public interface Obstacle {
 
 	/* Retruns the int corresponding to the current state of the game
 	  -1 - hasn't started
