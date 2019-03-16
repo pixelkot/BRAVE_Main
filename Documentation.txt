@@ -1,0 +1,5 @@
+Documentation
+-Pressing right trigger will activate the object.
+-The object being activated should have an OnVRTriggerDown method and a boolean called activated. 
+ When activated = true, do something. Take a look at CubeScript as an example.
+-The object being activated should also have a collider component wih "Is Trigger" checked. 
