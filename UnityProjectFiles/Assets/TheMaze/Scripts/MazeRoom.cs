@@ -11,6 +11,8 @@ public class MazeRoom : ScriptableObject
 
     public List<MazeCell> cells = new List<MazeCell>();
 
+    public bool completed = false;
+
     public void Add(MazeCell cell)
     {
         cell.room = this;
@@ -55,6 +57,7 @@ public class MazeRoom : ScriptableObject
         {
             cells[i].Unlock();
         }
+        completed = true;
     }
 
     public MazeCell RandomCell()
