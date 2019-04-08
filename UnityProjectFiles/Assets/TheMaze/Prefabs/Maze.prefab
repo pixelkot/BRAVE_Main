@@ -105,7 +105,7 @@ MonoBehaviour:
   cellPrefab: {fileID: 114598318240728252, guid: d04be83d1e2d443daa57826f37d4f55d,
     type: 2}
   maxRoomSize: 25
-  obstaclesToComplete: 1
+  obstaclesToComplete: 3
   size:
     x: 20
     z: 20
