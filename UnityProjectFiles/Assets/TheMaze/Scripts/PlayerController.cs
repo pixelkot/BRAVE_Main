@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour {
         {
             GameObject j = transform.Find("OVRCameraRig").gameObject;
             Transform T = Camera.main.transform;
-            Vector3 newPosition = transform.localPosition + new Vector3(T.forward.x, 0, T.forward.z) * 0.01f;
+            Vector3 newPosition = transform.localPosition + new Vector3(T.forward.x, 0, T.forward.z) * 0.05f;
             transform.localPosition = newPosition;
             j.transform.localPosition = new Vector3(0, 0, 0);
             //transform.localPosition = transform.localPosition + Vector3.up*0.01f;
