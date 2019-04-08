@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465934, g: 0.49642956, b: 0.5748249, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazePrefab: {fileID: 114820371992122436, guid: 3e409b50a9d4741eda9fba7d2b27a0f8,
     type: 2}
+  currentRoom: {fileID: 11400000, guid: 3bccca7b269f545d6b570f6bfe53d31d, type: 2}
   playerPrefab: {fileID: 114171447959934176, guid: 8bc24f3e8a31ed0429f8964f69e53d12,
     type: 2}
 --- !u!4 &1614373371

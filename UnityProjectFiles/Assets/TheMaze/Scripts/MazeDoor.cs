@@ -8,6 +8,7 @@ public class MazeDoor : MazePassage
     public GameObject door;
     [Range(0f, 1f)]
     public float doorSpeed = 0.01f;
+    public RoomVariable currentRoom;
 
     private IEnumerator closeCoroutine;
     private IEnumerator openCoroutine;
@@ -124,13 +125,6 @@ public class MazeDoor : MazePassage
     public void OnPlayerEnter()
     {
         seePlayer = true;
-        if (locked)
-        {
-            if (cell.room.obstacle.gameState() == 1)
-            {
-                Unlock();
-            }
-        }
         if (!locked)
         {
             OtherSideOfDoor.cell.room.Show();
@@ -148,6 +142,7 @@ public class MazeDoor : MazePassage
             {
                 CloseDoor(false);
                 OtherSideOfDoor.CloseDoor(true);
+                currentRoom.RuntimeValue = cell.room;
             }
         }
     }

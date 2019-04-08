@@ -6,6 +6,7 @@ public class Maze : MonoBehaviour {
 
     public MazeCell cellPrefab;
     public int maxRoomSize = 15;
+    public int obstaclesToComplete = 2;
     public IntVector2 size;
     public float generationStepDelay;
     public MazePassage passagePrefab;
@@ -16,11 +17,15 @@ public class Maze : MonoBehaviour {
     public float doorProbability;
     public MazeRoomSettings[] roomSettings;
     public GameObject[] mazeObstacles;
+    public FloatVariable obstaclesCompleted;
+    public RoomVariable currentRoom;
+    public GameObject portalPrefab;
+    public Transform playerTransform;
+    public Transform playerCameraTransform;
 
     private MazeCell[,] cells;
 
     private List<MazeRoom> rooms = new List<MazeRoom>();
-    private int currentRoom;
 
     private MazeRoom CreateRoom(int indexToExclude)
     {
@@ -38,6 +43,36 @@ public class Maze : MonoBehaviour {
     public MazeCell GetCell(IntVector2 coordinates)
     {
         return cells[coordinates.x, coordinates.z];
+    }
+
+    public void SpawnEndGame()
+    {
+        if (ObjectiveIsCompleted())
+        {
+            MazeCell cell = currentRoom.RuntimeValue.RandomCell();
+            GameObject portal = Instantiate(portalPrefab, cell.transform);
+            portal.transform.localPosition = Vector3.zero;
+
+            PortalTeleporter[] teleporters = portal.GetComponentsInChildren<PortalTeleporter>();
+            foreach (PortalTeleporter t in teleporters) {
+                t.player = playerTransform;
+            }
+            PortalCamera[] cameras = portal.GetComponents<PortalCamera>();
+            foreach (PortalCamera c in cameras)
+            {
+                c.playerCamera = playerCameraTransform;
+            }
+        }
+    }
+
+    public bool ObjectiveIsCompleted()
+    {
+        return obstaclesCompleted.RuntimeValue >= Mathf.Min(obstaclesToComplete, rooms.Count);
+    }
+
+    public void UnlockRoom()
+    {
+        currentRoom.RuntimeValue.Unlock();
     }
 
     //public IEnumerator Generate()

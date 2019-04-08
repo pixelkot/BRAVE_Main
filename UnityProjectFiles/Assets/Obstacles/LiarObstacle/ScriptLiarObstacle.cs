@@ -29,6 +29,8 @@ public class ScriptLiarObstacle : MonoBehaviour, Obstacle {
 	public Transform winMessage;
 	public Transform loseMessage;
     public Transform completed;
+    public GameEvent OnObstacleCompleted;
+    public FloatVariable ObstaclesCompleted;
 
 	// Use this for initialization
 	void Start () {
@@ -101,7 +103,9 @@ public class ScriptLiarObstacle : MonoBehaviour, Obstacle {
 		}
 
 		if (outcome == 1) {
-			Transform win = Instantiate(winMessage, this.transform);
+            OnObstacleCompleted.Raise();
+            ObstaclesCompleted.RuntimeValue += 1;
+            Transform win = Instantiate(winMessage, this.transform);
 			win.localPosition = new Vector3(0, 2, 0);
 
 			Destroy(win.gameObject, 5f);

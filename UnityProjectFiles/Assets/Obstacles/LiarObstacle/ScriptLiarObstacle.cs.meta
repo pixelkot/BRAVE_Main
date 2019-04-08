@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0d87d0b14217b1c4f9c9f0441d2d4e18
-timeCreated: 1552167769
+timeCreated: 1554708651
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -16,6 +16,8 @@ MonoImporter:
   - loseMessage: {fileID: 4463856494089918, guid: 00ff749c599b4a24c96abf4857f5a007,
       type: 2}
   - completed: {fileID: 4550456236975772, guid: bb205945766015045bb11459c658c608,
+      type: 2}
+  - OnObstacleCompleted: {fileID: 11400000, guid: 5dd9ee9d81fe54c1581c9733bf280403,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

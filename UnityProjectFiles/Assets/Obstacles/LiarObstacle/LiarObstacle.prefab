@@ -59,3 +59,6 @@ MonoBehaviour:
   loseMessage: {fileID: 4463856494089918, guid: 00ff749c599b4a24c96abf4857f5a007,
     type: 2}
   completed: {fileID: 4550456236975772, guid: bb205945766015045bb11459c658c608, type: 2}
+  OnObstacleCompleted: {fileID: 11400000, guid: 5dd9ee9d81fe54c1581c9733bf280403,
+    type: 2}
+  ObstaclesCompleted: {fileID: 0}

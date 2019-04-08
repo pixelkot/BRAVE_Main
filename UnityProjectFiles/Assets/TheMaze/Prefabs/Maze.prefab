@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068186582693546}
   - component: {fileID: 114820371992122436}
+  - component: {fileID: 114655410224975832}
   m_Layer: 0
   m_Name: Maze
   m_TagString: Untagged
@@ -40,6 +41,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114655410224975832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1026385693408640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b721fdad772eb4c43a60f3c865bfaeb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 5dd9ee9d81fe54c1581c9733bf280403, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114820371992122436}
+        m_MethodName: UnlockRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!114 &114820371992122436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,6 +83,7 @@ MonoBehaviour:
   cellPrefab: {fileID: 114598318240728252, guid: d04be83d1e2d443daa57826f37d4f55d,
     type: 2}
   maxRoomSize: 25
+  obstaclesToComplete: 2
   size:
     x: 20
     z: 20
@@ -84,3 +114,9 @@ MonoBehaviour:
     wallMaterial: {fileID: 2100000, guid: 04bc7c0e7525949e8a468d841c93768f, type: 2}
   mazeObstacles:
   - {fileID: 1833264385984746, guid: 28200830ab22d5c4f91cfe1f4e1ac3a9, type: 2}
+  obstaclesCompleted: {fileID: 11400000, guid: e0242e6c267a24ec4b2bc3ba641e4d6e, type: 2}
+  currentRoom: {fileID: 11400000, guid: 3bccca7b269f545d6b570f6bfe53d31d, type: 2}
+  portalPrefab: {fileID: 1665641360173448, guid: 2689bf7e2f98b4320980e82b14a3faff,
+    type: 2}
+  playerTransform: {fileID: 0}
+  playerCameraTransform: {fileID: 0}

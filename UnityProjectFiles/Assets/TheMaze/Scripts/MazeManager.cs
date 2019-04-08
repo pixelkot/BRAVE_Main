@@ -5,6 +5,7 @@ using UnityEngine;
 public class MazeManager : MonoBehaviour {
 
     public Maze mazePrefab;
+    public RoomVariable currentRoom;
 
     public PlayerController playerPrefab;
 
@@ -37,7 +38,12 @@ public class MazeManager : MonoBehaviour {
         playerInstance = Instantiate(playerPrefab, this.transform) as PlayerController;
         MazeCell c = mazeInstance.GetCell(mazeInstance.RandomCoordinates);
         c.room.Show();
+        currentRoom.RuntimeValue = c.room;
         playerInstance.SetLocation(c);
+        GameObject player = playerInstance.gameObject;
+        mazeInstance.playerTransform = player.transform;
+        Camera cam = player.GetComponentInChildren<Camera>();
+        mazeInstance.playerCameraTransform = cam.transform;
         //*****************************************************
     }
 
