@@ -36,14 +36,16 @@ public class MazeManager : MonoBehaviour {
         mazeInstance.Generate();
         //********* Extra Code For Testing ********************
         playerInstance = Instantiate(playerPrefab, this.transform) as PlayerController;
-        MazeCell c = mazeInstance.GetCell(mazeInstance.RandomCoordinates);
-        c.room.Show();
-        currentRoom.RuntimeValue = c.room;
-        playerInstance.SetLocation(c);
+        MazeRoom r = mazeInstance.RandomRoom;
+        r.Show();
+        currentRoom.RuntimeValue = r;
+        playerInstance.SetLocation(r.RandomUnfilledCell());
         GameObject player = playerInstance.gameObject;
         mazeInstance.playerTransform = player.transform;
+        //mazeInstance.playerTransform = GameObject.Find("body").transform;
         Camera cam = player.GetComponentInChildren<Camera>();
         mazeInstance.playerCameraTransform = cam.transform;
+        mazeInstance.CheckObstaclesRemaining();
         //*****************************************************
     }
 

@@ -67,6 +67,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 114820371992122436}
+        m_MethodName: SpawnEndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 114820371992122436}
+        m_MethodName: CheckObstaclesRemaining
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114820371992122436
@@ -83,7 +105,7 @@ MonoBehaviour:
   cellPrefab: {fileID: 114598318240728252, guid: d04be83d1e2d443daa57826f37d4f55d,
     type: 2}
   maxRoomSize: 25
-  obstaclesToComplete: 2
+  obstaclesToComplete: 1
   size:
     x: 20
     z: 20
@@ -115,6 +137,7 @@ MonoBehaviour:
   mazeObstacles:
   - {fileID: 1833264385984746, guid: 28200830ab22d5c4f91cfe1f4e1ac3a9, type: 2}
   obstaclesCompleted: {fileID: 11400000, guid: e0242e6c267a24ec4b2bc3ba641e4d6e, type: 2}
+  obstaclesRemaining: {fileID: 11400000, guid: d189ecd5f7a6d3644909a6e67c78b42f, type: 2}
   currentRoom: {fileID: 11400000, guid: 3bccca7b269f545d6b570f6bfe53d31d, type: 2}
   portalPrefab: {fileID: 1665641360173448, guid: 2689bf7e2f98b4320980e82b14a3faff,
     type: 2}

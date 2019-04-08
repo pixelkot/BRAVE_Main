@@ -61,4 +61,4 @@ MonoBehaviour:
   completed: {fileID: 4550456236975772, guid: bb205945766015045bb11459c658c608, type: 2}
   OnObstacleCompleted: {fileID: 11400000, guid: 5dd9ee9d81fe54c1581c9733bf280403,
     type: 2}
-  ObstaclesCompleted: {fileID: 0}
+  ObstaclesCompleted: {fileID: 11400000, guid: e0242e6c267a24ec4b2bc3ba641e4d6e, type: 2}

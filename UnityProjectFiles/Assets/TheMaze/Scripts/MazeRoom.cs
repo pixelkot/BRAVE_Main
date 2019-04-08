@@ -6,6 +6,7 @@ public class MazeRoom : ScriptableObject
 {
     public Obstacle obstacle;
     public int settingsIndex;
+    public MazeCell obstacleCell;
 
     public MazeRoomSettings settings;
 
@@ -62,6 +63,21 @@ public class MazeRoom : ScriptableObject
 
     public MazeCell RandomCell()
     {
-        return cells[Random.Range(0, cells.Count)];
+        MazeCell c = cells[Random.Range(0, cells.Count)];
+        return c;
+
+    }
+
+    public MazeCell RandomUnfilledCell()
+    {
+        MazeCell c = cells[Random.Range(0, cells.Count)];
+        while (c == obstacleCell) {
+            c = cells[Random.Range(0, cells.Count)];
+            if (cells.Count == 1)
+            {
+                break;
+            }
+        }
+        return c;
     }
 }

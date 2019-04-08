@@ -18,6 +18,7 @@ public class Maze : MonoBehaviour {
     public MazeRoomSettings[] roomSettings;
     public GameObject[] mazeObstacles;
     public FloatVariable obstaclesCompleted;
+    public FloatVariable obstaclesRemaining;
     public RoomVariable currentRoom;
     public GameObject portalPrefab;
     public Transform playerTransform;
@@ -49,20 +50,32 @@ public class Maze : MonoBehaviour {
     {
         if (ObjectiveIsCompleted())
         {
-            MazeCell cell = currentRoom.RuntimeValue.RandomCell();
+            MazeCell cell = currentRoom.RuntimeValue.RandomUnfilledCell();
             GameObject portal = Instantiate(portalPrefab, cell.transform);
             portal.transform.localPosition = Vector3.zero;
 
+            Debug.Log("Beginning to assign portal Teleporter transforms");
             PortalTeleporter[] teleporters = portal.GetComponentsInChildren<PortalTeleporter>();
             foreach (PortalTeleporter t in teleporters) {
                 t.player = playerTransform;
+                Debug.Log("assigning portal teleporter player transform");
+                //t.player = playerCameraTransform;
             }
-            PortalCamera[] cameras = portal.GetComponents<PortalCamera>();
+            Debug.Log("Beginning to assign portal Camera transforms");
+            PortalCamera[] cameras = portal.GetComponentsInChildren<PortalCamera>();
             foreach (PortalCamera c in cameras)
             {
+                Debug.Log("assigning portal camera player camera transform");
                 c.playerCamera = playerCameraTransform;
             }
+
+            Debug.Log("Finished to assigning all transforms");
         }
+    }
+
+    public void CheckObstaclesRemaining()
+    {
+        obstaclesRemaining.RuntimeValue = Mathf.Min(obstaclesToComplete, rooms.Count) - obstaclesCompleted.RuntimeValue;
     }
 
     public bool ObjectiveIsCompleted()
@@ -110,6 +123,7 @@ public class Maze : MonoBehaviour {
     {
         GameObject obstacle = mazeObstacles[Random.Range(0, mazeObstacles.Length)];
         MazeCell cell = room.RandomCell();
+        room.obstacleCell = cell;
         obstacle = Instantiate(obstacle, this.transform);
         obstacle.transform.parent = cell.transform;
         obstacle.transform.localPosition = Vector3.zero;
@@ -232,6 +246,14 @@ public class Maze : MonoBehaviour {
         get
         {
             return new IntVector2(Random.Range(0, size.x), Random.Range(0, size.z));
+        }
+    }
+
+    public MazeRoom RandomRoom
+    {
+        get
+        {
+            return rooms[Random.Range(0, rooms.Count)];
         }
     }
 

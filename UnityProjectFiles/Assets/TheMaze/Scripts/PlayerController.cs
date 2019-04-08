@@ -16,7 +16,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (OVRInput.Get(OVRInput.Button.One))
         {
-            GameObject j = transform.Find("OVRCameraRig").gameObject;
+            GameObject j = GameObject.Find("OVRCameraRig");
+            //GameObject j = transform.Find("OVRCameraRig").gameObject;
             Transform T = Camera.main.transform;
             Vector3 newPosition = transform.localPosition + new Vector3(T.forward.x, 0, T.forward.z) * 0.05f;
             transform.localPosition = newPosition;

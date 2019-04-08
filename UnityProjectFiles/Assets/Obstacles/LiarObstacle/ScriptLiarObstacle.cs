@@ -103,8 +103,9 @@ public class ScriptLiarObstacle : MonoBehaviour, Obstacle {
 		}
 
 		if (outcome == 1) {
-            OnObstacleCompleted.Raise();
             ObstaclesCompleted.RuntimeValue += 1;
+            Debug.Log("Number of Obstacles Completed " + ObstaclesCompleted.RuntimeValue);
+            OnObstacleCompleted.Raise();
             Transform win = Instantiate(winMessage, this.transform);
 			win.localPosition = new Vector3(0, 2, 0);
 

@@ -44,10 +44,10 @@ public class ControllerScript_Kevin : MonoBehaviour
                         object_hit.activated = true;
                     } */
                     ispressed = true;
-                    object_hit.SendMessage("OnCollisionEnter", new Collision());
+                    object_hit.SendMessage("OnCollisionEnter", new Collision(), SendMessageOptions.DontRequireReceiver);
                     Debug.Log("Trigger Pressed");
                 }
-                if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger, OVRInput.Controller.Touch) == 0)
+                if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger, OVRInput.Controller.Touch) < 0.1f)
                 {
                     ispressed = false;
                 }
