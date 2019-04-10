@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 54421840633313196}
   - component: {fileID: 120239374883465340}
   - component: {fileID: 114011510898981104}
+  - component: {fileID: 114812772961861070}
   m_Layer: 0
   m_Name: hand_right
   m_TagString: Player
@@ -747,7 +748,7 @@ BoxCollider:
   m_GameObject: {fileID: 1794847373540178}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -771,7 +772,7 @@ BoxCollider:
   m_GameObject: {fileID: 1131153249898010}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -945,7 +946,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523065347015736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62ab3af5290d4038a6460b63a97b18b, type: 3}
   m_Name: 
@@ -1209,6 +1210,20 @@ MonoBehaviour:
   m_Text: 'Welcome to the Maze!
 
     Let''s Start Clearing Some Obstacles!'
+--- !u!114 &114812772961861070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1131153249898010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab9bfedd6b953bb48ad1c46ae54ea6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: 2
+  playerTransform: {fileID: 4658965377194510}
+  currentRoom: {fileID: 11400000, guid: 3bccca7b269f545d6b570f6bfe53d31d, type: 2}
 --- !u!114 &114944521243933122
 MonoBehaviour:
   m_ObjectHideFlags: 1

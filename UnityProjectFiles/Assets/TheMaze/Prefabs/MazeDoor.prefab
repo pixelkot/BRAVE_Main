@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4791185235006664}
   - component: {fileID: 65567146753066194}
   - component: {fileID: 114730604973365812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Doortrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,6 @@ MonoBehaviour:
   hinge: {fileID: 4232633238018318}
   door: {fileID: 1550206195420352}
   doorSpeed: 0.3
-  currentRoom: {fileID: 11400000, guid: 3bccca7b269f545d6b570f6bfe53d31d, type: 2}
   locked: 1
 --- !u!114 &114730604973365812
 MonoBehaviour:

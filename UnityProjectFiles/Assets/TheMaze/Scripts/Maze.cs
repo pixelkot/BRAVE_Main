@@ -157,7 +157,7 @@ public class Maze : MonoBehaviour {
     {
         //int currentIndex = 0;
         //int currentIndex = activeCells.Count/2;
-        int currentIndex = Mathf.Max(activeCells.Count - 4, 0);
+        int currentIndex = Mathf.Max(activeCells.Count - 2, 0);
         //int currentIndex = activeCells.Count - 1;
         MazeCell currentCell = activeCells[currentIndex];
         if (currentCell.IsFullyInitialized)
@@ -253,7 +253,12 @@ public class Maze : MonoBehaviour {
     {
         get
         {
-            return rooms[Random.Range(0, rooms.Count)];
+            MazeRoom r = rooms[Random.Range(0, rooms.Count)];
+            while (r.cells.Count < 5)
+            {
+                r = rooms[Random.Range(0, rooms.Count)];
+            }
+            return r;
         }
     }
 

@@ -8,7 +8,8 @@ public class ControllerScript_Kevin : MonoBehaviour
     public GameObject temp;
 
     private bool ispressed = false;
-    
+    private int layerMask = ~(1 << 9);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,7 @@ public class ControllerScript_Kevin : MonoBehaviour
         RaycastHit hit;
         transform.rotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTrackedRemote);
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, layerMask))
         {
             if (hit.collider != null)
             {   
@@ -45,7 +46,7 @@ public class ControllerScript_Kevin : MonoBehaviour
                     } */
                     ispressed = true;
                     object_hit.SendMessage("OnCollisionEnter", new Collision(), SendMessageOptions.DontRequireReceiver);
-                    Debug.Log("Trigger Pressed");
+                    Debug.Log("Trigger Pressed, ObjectName: " + object_hit.name);
                 }
                 if (OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger, OVRInput.Controller.Touch) < 0.1f)
                 {
