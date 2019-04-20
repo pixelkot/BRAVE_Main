@@ -6,9 +6,9 @@ public class Maze : MonoBehaviour {
 
     public MazeCell cellPrefab;
     public int maxRoomSize = 15;
-    public int obstaclesToComplete = 2;
+    [Range(0.001f, 1f)]
+    public float percentObstaclesToWin = 0.1f;
     public IntVector2 size;
-    public float generationStepDelay;
     public MazePassage passagePrefab;
     public int mazeWallMultiplier;
     public MazeWall[] wallPrefabs;
@@ -75,12 +75,12 @@ public class Maze : MonoBehaviour {
 
     public void CheckObstaclesRemaining()
     {
-        obstaclesRemaining.RuntimeValue = Mathf.Min(obstaclesToComplete, rooms.Count) - obstaclesCompleted.RuntimeValue;
+        obstaclesRemaining.RuntimeValue = Mathf.Ceil(percentObstaclesToWin * rooms.Count) - obstaclesCompleted.RuntimeValue;
     }
 
     public bool ObjectiveIsCompleted()
     {
-        return obstaclesCompleted.RuntimeValue >= Mathf.Min(obstaclesToComplete, rooms.Count);
+        return obstaclesCompleted.RuntimeValue > percentObstaclesToWin*rooms.Count;
     }
 
     public void UnlockRoom()
