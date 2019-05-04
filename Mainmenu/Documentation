@@ -1,1 +1,40 @@
-Documentation
+Main Menu
+Creating a simply starting menu that allows users to select sound and difficulty of the maze. 
+
+For more information visit: https://unity3d.com/learn/tutorials/topics/user-interface-ui/creating-main-menu
+
+	In charge of:
+Create links between setting/difficulty/start of the maze
+	
+	How to Use:
+Create Canvas. (GameObject -> UI -> Canvas)
+Under the Canvas, create panels to separate between different functions of the main menu such as audio and brightness. (GameObject -> UI -> Panels)
+Under each of the panels, create buttons depending on how many you need (GameObject -> UI -> Button)
+Open Scenes by going to File -> Build Settings -> Open Scenes 
+Do this while being in the scene you want to use (switching to and from)
+Attach the LoadSceneOnClick script onto each of the buttons and assign a number
+This number will correspond to the order in “Open Scenes” from set 4
+For example, if I click on the button “Medium Difficulty”, it would load the scene that activates the maze in medium difficulty
+
+Simplified Code:
+
+using UnityEngine;
+using System.Collections;
+using UnityEngine.SceneManagement;
+
+public class LoadSceneOnClick : MonoBehaviour {
+
+    public void LoadByIndex(int sceneIndex)
+    {
+        SceneManager.LoadScene (sceneIndex);
+    }
+}
+
+
+	Reasons to edit:
+Instead of using a click to trigger an event (switching setting/difficulty), using a different mode of trigger (such as ray gun)
+Edit design of the VR environment
+
+
+
+
