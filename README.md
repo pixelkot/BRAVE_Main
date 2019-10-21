@@ -1,6 +1,11 @@
 # Brain-Games-2.0
-# Link to Documentation
-https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU
+# Documentation/References
+[MAZE Obstacle API Documentation](https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU)
+
+[GITHUBxUNITY3D Guide](https://paper.dropbox.com/doc/Dev-Guide-GitHub--Am656hWa3VkMB7r992QumpdPAg-fzIDKjJWtTxSlHH2Ci02C)
+[Solution Architecture: Obstacle Implementation Guide](https://paper.dropbox.com/doc/Obstacle-Implementation-Architecture--AnCxImsAM7LB_kJqql~DlKaTAg-VKBBZLaOhGmY3cVnmnFgb)
+[Solution Architecture: Example Meditation Obstacle](https://paper.dropbox.com/doc/Meditation-Obstacle-Architecture--AnASf7RYcqSVYUF_HuCo8CyiAg-8wyKWobDQ516GbKHuh71o)
+[Solution Architecture: Example Wim Hof Obstacle](https://paper.dropbox.com/doc/Wim-Hof-Obstacle-Architecture--AnBeA_SVqlQA8HX7r77_xKyIAg-jp7NB25FQrnEidHgeP7eL)
 
 # Unity version is 2017.1.1
 
