@@ -5,6 +5,8 @@
 
 [GITHUBxUNITY3D Guide](https://paper.dropbox.com/doc/Dev-Guide-GitHub--Am656hWa3VkMB7r992QumpdPAg-fzIDKjJWtTxSlHH2Ci02C)
 
+[Obstacle Interface Class](https://paper.dropbox.com/doc/Obstacle-Interface-Class-PARENT--AnMYBme1k_kLVsXIOt4wyLTSAg-EtDIGGJ4UNaGECNtZvHpf)
+
 [Solution Architecture: Obstacle Implementation Guide](https://paper.dropbox.com/doc/Obstacle-Implementation-Architecture--AnCxImsAM7LB_kJqql~DlKaTAg-VKBBZLaOhGmY3cVnmnFgb)
 
 [Solution Architecture: Example Meditation Obstacle](https://paper.dropbox.com/doc/Meditation-Obstacle-Architecture--AnASf7RYcqSVYUF_HuCo8CyiAg-8wyKWobDQ516GbKHuh71o)
