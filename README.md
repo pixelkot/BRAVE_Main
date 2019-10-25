@@ -3,7 +3,9 @@
 [MAZE Obstacle API Documentation](https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU)
 
 
-[GITHUBxUNITY3D Guide](https://paper.dropbox.com/doc/Dev-Guide-GitHub--Am656hWa3VkMB7r992QumpdPAg-fzIDKjJWtTxSlHH2Ci02C)
+[Dev Guide: GITHUBxUNITY3D Guide](https://paper.dropbox.com/doc/Dev-Guide-GitHub--Am656hWa3VkMB7r992QumpdPAg-fzIDKjJWtTxSlHH2Ci02C)
+
+[Dev Guide: Writing Good Code?](https://paper.dropbox.com/doc/Dev-Guide--AnV_77eNnc6eP0K35WzBOSeuAQ-YqjO9RlrgQb9VxxzY6zYj)
 
 [Obstacle Interface Class](https://paper.dropbox.com/doc/Obstacle-Interface-Class-PARENT--AnMYBme1k_kLVsXIOt4wyLTSAg-EtDIGGJ4UNaGECNtZvHpf)
 
