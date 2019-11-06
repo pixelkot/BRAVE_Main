@@ -7,12 +7,13 @@
 
 [Dev Guide: Writing Good Code?](https://paper.dropbox.com/doc/Dev-Guide--AnV_77eNnc6eP0K35WzBOSeuAQ-YqjO9RlrgQb9VxxzY6zYj)
 
+[Dev Guide: Asset Sources && Licensing](https://paper.dropbox.com/doc/Licensing--AoHQniMm3~EoC4PePMHY4TeTAQ-hPsVceaRyon9WRaLwMpXx)
+
 [Obstacle Interface Class](https://paper.dropbox.com/doc/Obstacle-Interface-Class-PARENT--AnMYBme1k_kLVsXIOt4wyLTSAg-EtDIGGJ4UNaGECNtZvHpf)
 
 [Solution Architecture: Obstacle Implementation Guide](https://paper.dropbox.com/doc/Obstacle-Implementation-Architecture--AnCxImsAM7LB_kJqql~DlKaTAg-VKBBZLaOhGmY3cVnmnFgb)
 
 [Solution Architecture: Example Meditation Obstacle](https://paper.dropbox.com/doc/Meditation-Obstacle-Architecture--AnASf7RYcqSVYUF_HuCo8CyiAg-8wyKWobDQ516GbKHuh71o)
-
 
 [Solution Architecture: Example Wim Hof Obstacle](https://paper.dropbox.com/doc/Wim-Hof-Obstacle-Architecture--AnBeA_SVqlQA8HX7r77_xKyIAg-jp7NB25FQrnEidHgeP7eL)
 
