@@ -1,7 +1,5 @@
 # BRAVE
 # Documentation/References
-[MAZE Obstacle API Documentation](https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU)
-
 
 [Dev Guide: GITHUBxUNITY3D Guide](https://paper.dropbox.com/doc/Dev-Guide-GitHub--Am656hWa3VkMB7r992QumpdPAg-fzIDKjJWtTxSlHH2Ci02C)
 
