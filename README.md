@@ -15,21 +15,19 @@
 
 [Solution Architecture: Example Wim Hof Obstacle](https://paper.dropbox.com/doc/Wim-Hof-Obstacle-Architecture--AnBeA_SVqlQA8HX7r77_xKyIAg-jp7NB25FQrnEidHgeP7eL)
 
-# Unity version is 2017.1.1
+# Unity version is 2018.4.9f1
 
-*Updated as of 26th of Feb.*
+*Updated as of 7th of Feb 2020.*
 ## World API
   * environment (this is basically the scene)
     * contains:
        - Maze
-        * Maze API should be procedurally generated
+        * Maze should be procedurally generated
        - User
     * attributes
        - static (basically this is just a rigid body)
 ## Obstacle API
   * should be an abstract class
-  * each "rule" -- probably a class that implements obstacle needs to be hand made
-
 
 ## User API
   * attributes
