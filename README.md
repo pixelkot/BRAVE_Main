@@ -9,6 +9,8 @@
 
 [Designs](https://paper.dropbox.com/doc/Obstacle-Designs-wJKAWeRSqcvvriFQlyfNm)
 
+[Dev Guide: Dev Workshop Slides](https://docs.google.com/presentation/d/1uA7DJ721k_3aIFCz0J_2lDHB5RPp09n2CT3_5SNLv3E/edit?usp=sharing)
+
 [Obstacle Interface Class](https://paper.dropbox.com/doc/Obstacle-Interface-Class-PARENT--AnMYBme1k_kLVsXIOt4wyLTSAg-EtDIGGJ4UNaGECNtZvHpf)
 
 [Solution Architecture: Obstacle Implementation Guide](https://paper.dropbox.com/doc/Obstacle-Implementation-Architecture--AnCxImsAM7LB_kJqql~DlKaTAg-VKBBZLaOhGmY3cVnmnFgb)
