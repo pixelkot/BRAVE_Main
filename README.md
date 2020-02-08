@@ -7,6 +7,8 @@
 
 [Dev Guide: Asset Sources && Licensing](https://paper.dropbox.com/doc/Licensing--AoHQniMm3~EoC4PePMHY4TeTAQ-hPsVceaRyon9WRaLwMpXx)
 
+[Designs](https://paper.dropbox.com/doc/Obstacle-Designs-wJKAWeRSqcvvriFQlyfNm)
+
 [Obstacle Interface Class](https://paper.dropbox.com/doc/Obstacle-Interface-Class-PARENT--AnMYBme1k_kLVsXIOt4wyLTSAg-EtDIGGJ4UNaGECNtZvHpf)
 
 [Solution Architecture: Obstacle Implementation Guide](https://paper.dropbox.com/doc/Obstacle-Implementation-Architecture--AnCxImsAM7LB_kJqql~DlKaTAg-VKBBZLaOhGmY3cVnmnFgb)
