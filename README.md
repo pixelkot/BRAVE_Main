@@ -1,4 +1,4 @@
-# Brain-Games-2.0
+# BRAVE
 # Documentation/References
 [MAZE Obstacle API Documentation](https://paper.dropbox.com/doc/Maze-Obstacle-Course-API--AYL4joJ_grYa6yA9JK5SV0KWAQ-r6LeF5nKer8SWIV3wqHDU)
 
